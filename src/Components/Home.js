@@ -8,17 +8,18 @@ const Home = () => {
   return (
     <div>
       <Login>
-        <Link to={'/login'}>Login</Link>
+        <LoginLink to={'/login'}>Login</LoginLink>
       </Login>
       <Register>
-        <Link to={'/register'}>Register</Link>
+        <RegisterLink to={'/register'}>Register</RegisterLink>
       </Register>
       <Visitor>
-      <Link to={'/inventory'}>Visitor</Link>
+        <VisitorLink to={'/inventory'}>Visitor</VisitorLink>
       </Visitor>
     </div>
-  )
+  );
 }
+
 
 //////////////////////////////////////////////////
 
@@ -28,7 +29,14 @@ color: black;
 text-align: left;
 position: absolute;
 top: 20%;
+padding: 10px;
 `
+const LoginLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+`;
+
+////
 
 const Register =styled.div`
 font-size:30px;
@@ -36,7 +44,14 @@ color: black;
 text-align: left;
 position: absolute;
 top: 40%;
+padding: 10px;
 `
+const RegisterLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+`;
+
+////
 
 const Visitor =styled.div`
 font-size:30px;
@@ -44,7 +59,13 @@ color: black;
 text-align: left;
 position: absolute;
 top: 60%;
+padding: 10px;
 `
+
+const VisitorLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+`;
 
 //////////////////////////////////////////////////
 

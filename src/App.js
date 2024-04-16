@@ -6,12 +6,14 @@ import Login from './Components/Login';
 import Register from './Components/Register';
 import Inventory from './Components/Inventory';
 import ProductDetails from './Components/ProductDetails';
+import Header from './Components/Header';
 
 //////////////////////////////////////////////////
 
 function App() {
   return (
     <div className="App">
+      <Header/>
       <Router>
         <Routes>
           <Route path={'/'} element={<Home/>}></Route>
