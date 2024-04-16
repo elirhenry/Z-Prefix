@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
-import Home from './Home';
-import Login from './Login';
-import Register from './Register';
-import Inventory from './Inventory';
-import ProductDetails from './ProductDetails';
+import Home from './Components/Home';
+import Login from './Components/Login';
+import Register from './Components/Register';
+import Inventory from './Components/Inventory';
+import ProductDetails from './Components/ProductDetails';
 
 //////////////////////////////////////////////////
 

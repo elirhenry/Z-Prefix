@@ -3,9 +3,11 @@ import React from 'react';
 
 //////////////////////////////////////////////////
 
-const ProductDetails = () => {
+const Register = () => {
   return (
-    <h1>ProductDetails page</h1>
+    <div>
+      <h1>register page</h1>
+    </div>
   )
 }
 
@@ -17,4 +19,4 @@ const ProductDetails = () => {
 
 //////////////////////////////////////////////////
 
-export default ProductDetails;
+export default Register;

@@ -3,11 +3,11 @@ import React from 'react';
 
 //////////////////////////////////////////////////
 
-//have link to ProductDetails component page
-
-const Inventory = () => {
+const Login = () => {
   return (
-    <h1>Inventory page</h1>
+    <div>
+      <h1>login page</h1>
+    </div>
   )
 }
 
@@ -19,4 +19,4 @@ const Inventory = () => {
 
 //////////////////////////////////////////////////
 
-export default Inventory;
+export default Login;
