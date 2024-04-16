@@ -23,16 +23,28 @@ const Home = () => {
 //////////////////////////////////////////////////
 
 const Login =styled.div`
-font-size:20px;
-color: black;`
+font-size:30px;
+color: black;
+text-align: left;
+position: absolute;
+top: 20%;
+`
 
 const Register =styled.div`
-font-size:20px;
-color: black;`
+font-size:30px;
+color: black;
+text-align: left;
+position: absolute;
+top: 40%;
+`
 
 const Visitor =styled.div`
-font-size:20px;
-color: black;`
+font-size:30px;
+color: black;
+text-align: left;
+position: absolute;
+top: 60%;
+`
 
 //////////////////////////////////////////////////
 

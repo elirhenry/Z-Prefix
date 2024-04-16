@@ -3,6 +3,8 @@ import React from 'react';
 
 //////////////////////////////////////////////////
 
+//have link to ProductDetails component page
+
 const Inventory = () => {
   return (
     <h1>Inventory page</h1>
