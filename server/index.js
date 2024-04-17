@@ -12,11 +12,17 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  res.status(200).json('It works');
+  res.status(200).json('Server Home Page');
 });
 
 app.get('/items', (req, res) => {
   res.status(200).json(items);
+});
+
+app.post('/items', (req, res) => {
+  // const newItem= req.body;
+  // items.push(newItem);
+  res.status(201).json(items);
 });
 
 
