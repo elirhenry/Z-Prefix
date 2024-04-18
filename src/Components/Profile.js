@@ -1,27 +1,42 @@
 import { useAuth0 } from '@auth0/auth0-react';
+// import LogoutButton from './LogoutButton'
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Profile = () => {
   const { user, isAuthenticated } = useAuth0();
 
+
+
   return (
     isAuthenticated && (
-      <article>
+      <div>
+        {/* <LogoutButton/> */}
+        <article>
         {user?.picture && <img src={user.picture} alt={user?.name}></img>}
-        {/* <h2>{user?.name}</h2>
-        <ul>
-          {Object.keys(user).map((objKey, i) =>
-        <li key={i}>{objKey}: {user[objKey]}</li>)}
-        </ul> */}
       </article>
+      <StoreInventory>
+        <MyStoreLink to={'/my-store'}>My Store Inventory</MyStoreLink>
+      </StoreInventory>
+      </div>
     )
   )
 }
 
 //////////////////////////////////////////////////
 
-// const Login =styled.div`
-// font-size:20px;
-// color: black;`
+const StoreInventory =styled.div`
+font-size:30px;
+color: black;
+text-align: center;
+top: 30%;
+padding: 20px;
+`
+
+const MyStoreLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+`
 
 //////////////////////////////////////////////////
 

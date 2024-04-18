@@ -38,6 +38,8 @@ const Inventory = () => {
                 </DetailsLink>
               <td>{item.stock}</td>
               <td>{item.description}</td>
+              <EditButton><button>Edit</button></EditButton>
+              <DeleteButton><button>Delete</button></DeleteButton>
             </tr>
           ))}
         </tbody>
@@ -66,6 +68,19 @@ margin-top: 10px;
 const StyledTable =styled.table`
 width: 100%;
 border-spacing: 1rem;
+`
+const EditButton = styled.td`
+  button {
+    background-color: blue;
+    color: white;
+  }
+`
+
+const DeleteButton = styled.td`
+  button {
+    background-color: red;
+    color: white;
+  }
 `
 
 //////////////////////////////////////////////////

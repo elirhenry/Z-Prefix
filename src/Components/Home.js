@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
 import Profile from './Profile';
@@ -40,7 +39,7 @@ font-size:30px;
 color: black;
 text-align: center;
 top: 30%;
-padding: 10px;
+padding: 20px;
 `
 
 const VisitorLink = styled(Link)`

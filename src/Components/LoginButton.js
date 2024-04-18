@@ -6,7 +6,7 @@ const LoginButton = () => {
 
   return (
     !isAuthenticated && (
-    <StyledButton onClick={() => loginWithRedirect()}>
+      <StyledButton onClick={() => loginWithRedirect()}>
       Login/Register
     </StyledButton>
     )
@@ -23,9 +23,9 @@ const StyledButton = styled.button`
   font-size:30px;
   color: black;
   top: 40%;
-  padding: 10px;
-`;
-
+  padding: 20px;
+  cursor: pointer;
+`
 
 //////////////////////////////////////////////////
 

@@ -17,7 +17,7 @@ const Header = () => {
 
 const HeaderStyle = styled.div`
   background-color: black;
-  font-size: 30px;
+  font-size: 50px;
   color: white;
   position: sticky;
   top: 0;
@@ -26,6 +26,7 @@ const HeaderStyle = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  margin-bottom: 20px;
 `;
 
 const HeaderLink = styled.a`

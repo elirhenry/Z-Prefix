@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 8080;
-const items = require('./Items');
+const items = require('./MyStoreItems');
 // const users = require('./Users');
 
 app.use((req, res, next) => {
