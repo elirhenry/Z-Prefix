@@ -19,7 +19,7 @@ const Inventory = () => {
 
   return (
     <div className='container mt-5'>
-      <Link to='/add-new-item' className='new-item-button'>Add Item +</Link>
+      <AddItemLink to={'/add-item'}>New Item +</AddItemLink>
       <StyledTable className='table'>
         <thead>
           <tr>
@@ -33,33 +33,54 @@ const Inventory = () => {
           {data.map((item, index) => (
             <tr key={index}>
               <td>{item.id}</td>
-              <td>{item.name}</td>
+                <DetailsLink to={'/details'}>
+                  <td>{item.name}</td>
+                </DetailsLink>
               <td>{item.stock}</td>
               <td>{item.description}</td>
+              <EditButton><button>Edit</button></EditButton>
+              <DeleteButton><button>Delete</button></DeleteButton>
             </tr>
           ))}
         </tbody>
       </StyledTable>
-      <Product>
-        <Link to={'/details'}>Product Details</Link>
-      </Product>
+
     </div>
   );
 };
 
 //////////////////////////////////////////////////
 
-const Product =styled.div`
-font-size:30px;
-color: black;
-text-align: left;
-position: absolute;
-top: 30%;
+const DetailsLink = styled(Link)`
+  text-decoration: none;
+  color: blue;
+`;
+
+const AddItemLink = styled(Link)`
+text-decoration: none;
+color: white;
+background-color: green;
+padding: 0.5rem 1rem;
+display: inline-block;
+margin-top: 10px;
 `
 
 const StyledTable =styled.table`
 width: 90%;
 border-spacing: 1rem;
+`
+const EditButton = styled.td`
+  button {
+    background-color: blue;
+    color: white;
+  }
+`
+
+const DeleteButton = styled.td`
+  button {
+    background-color: red;
+    color: white;
+  }
 `
 
 //////////////////////////////////////////////////

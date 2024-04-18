@@ -34,7 +34,7 @@ padding: 10px;
 const LoginLink = styled(Link)`
   text-decoration: none;
   color: black;
-`;
+`
 
 ////
 
@@ -65,7 +65,7 @@ padding: 10px;
 const VisitorLink = styled(Link)`
   text-decoration: none;
   color: black;
-`;
+`
 
 //////////////////////////////////////////////////
 
