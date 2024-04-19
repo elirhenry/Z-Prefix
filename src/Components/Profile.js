@@ -18,6 +18,9 @@ const Profile = () => {
       <StoreInventory>
         <MyStoreLink to={'/my-store'}>My Store Inventory</MyStoreLink>
       </StoreInventory>
+      <AllInventory>
+        <MyStoreLink to={'/every-store'}>All Inventory</MyStoreLink>
+      </AllInventory>
       </div>
     )
   )
@@ -36,6 +39,14 @@ padding: 20px;
 const MyStoreLink = styled(Link)`
   text-decoration: none;
   color: black;
+`
+
+const AllInventory =styled.div`
+font-size:30px;
+color: black;
+text-align: center;
+top: 30%;
+padding: 20px;
 `
 
 //////////////////////////////////////////////////

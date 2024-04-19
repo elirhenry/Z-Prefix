@@ -22,9 +22,7 @@ const Home = () => {
           <Profile/>
           </>
         )}
-
       </main>
-
       <Visitor>
         <VisitorLink to={'/inventory'}>Visitor</VisitorLink>
       </Visitor>
