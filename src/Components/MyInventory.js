@@ -1,21 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-// import AddItem from './AddItem';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 //////////////////////////////////////////////////
 
 const Inventory = () => {
   const[data, setData] = useState([])
-
+  const navigate= useNavigate()
   useEffect(() => {
     fetch('http://localhost:8080/items')
       .then(response => response.json())
       .then(data => {
         setData(data);
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log(err))
   }, [data]);
+
+  const handleDelete = (id) => {
+    const confirmDelete = window.confirm('Are you sure you want to delete this item?')
+    if (confirmDelete) {
+      axios.delete(`http://localhost:8080/items/${id}`)
+        .then(res => {
+          alert('Item deleted')
+          navigate('/inventory')
+        })
+        .catch(err => console.log(err))
+    }
+  }
 
   return (
     <div className='container mt-5'>
@@ -38,8 +50,8 @@ const Inventory = () => {
                 </DetailsLink>
               <td>{item.stock}</td>
               <td>{item.description}</td>
-              <EditButton><button>Edit</button></EditButton>
-              <DeleteButton><button>Delete</button></DeleteButton>
+              <UpdateItemLink to={'/update-item'}>Edit</UpdateItemLink>
+              <DeleteItemLink to="#" onClick={() => handleDelete(item.id)}>Delete</DeleteItemLink>
             </tr>
           ))}
         </tbody>
@@ -47,6 +59,7 @@ const Inventory = () => {
 
     </div>
   );
+
 };
 
 //////////////////////////////////////////////////
@@ -69,18 +82,24 @@ const StyledTable =styled.table`
 width: 100%;
 border-spacing: 1rem;
 `
-const EditButton = styled.td`
-  button {
-    background-color: blue;
-    color: white;
-  }
+
+const UpdateItemLink = styled(Link)`
+text-decoration: none;
+color: white;
+background-color: blue;
+padding: 0.5rem 1rem;
+display: inline-block;
+margin-top: 10px;
 `
 
-const DeleteButton = styled.td`
-  button {
-    background-color: red;
-    color: white;
-  }
+const DeleteItemLink = styled(Link)`
+text-decoration: none;
+color: white;
+background-color: red;
+padding: 0.5rem 1rem;
+display: inline-block;
+margin-top: 10px;
+margin-left: 10px;
 `
 
 //////////////////////////////////////////////////

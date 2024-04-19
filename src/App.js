@@ -6,6 +6,7 @@ import Inventory from './Components/Inventory';
 import ProductDetails from './Components/ProductDetails';
 import Header from './Components/Header';
 import AddItem from './Components/AddItem';
+import UpdateItem from './Components/UpdateItem';
 import Profile from './Components/Profile';
 import MyInventory from './Components/MyInventory';
 import AllInventory from './Components/All-Inventory';
@@ -22,6 +23,7 @@ function App() {
           <Route path={'/inventory'} element={<Inventory/>}></Route>
           <Route path={'/details'} element={<ProductDetails/>}></Route>
           <Route path={'/add-item'} element={<AddItem/>}></Route>
+          <Route path={'/update-item'} element={<UpdateItem/>}></Route>
           <Route path={'/profile'} element={<Profile/>}></Route>
           <Route path={'/my-store'} element={<MyInventory/>}></Route>
           <Route path={'/every-store'} element={<AllInventory/>}></Route>
