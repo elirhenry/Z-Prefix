@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Getting Started with Create React App:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app allows authorized users (inventory managers) to register for and log in to their account where they can:
+  View their store inventory
+  View the inventory from all stores
+  Add, delete, and edit items from any store
+This app also lets unauthorized (no login) users:
+  View the inventory from all stores
+  Add an item
 
-## Available Scripts
+After opening this project using the https://github.com/elirhenry/Z-Prefix repo, run npm install then npm start to run the server and src directories.
+  http://localhost:8080/items
+    This endpoint shows the ite
+## Directories:
 
-In the project directory, you can run:
+server:
+  In this directory you can view the database information using the following url's:
+  http://localhost:8080/items
+    This endpoint shows what items in the database for the authenticated users store.
+  http://localhost:8080/all-items
+   This endpoint shows what items in the database for all stores.
 
-### `npm start`
+src:
+  Contains front-end component files for UI.
+  There is a headerbar labeled 'Database' that returns you to the home page from any other page.
+  From the home page http://localhost:3000/ the user can register for and login to an account or view the inventory and add an item.
+  After a user creates a login they are redirected to their profile page where they can:
+    Use the sign out button to log out and return to the main page.
+    Click on My Store Inventory to view their store inventory; here they can add, delete, or edit items, and view item details.
+    Click on All Inventory to view the full inventory database and make the same modifications.
+    Click Visitor to view the unauth user inventory view.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
