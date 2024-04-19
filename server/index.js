@@ -32,6 +32,13 @@ app.post('/all-items', (req, res) => {
   res.status(201).json(allitems);
 });
 
+app.patch('/all-items', (req, res) => {
+  res.status(201).json(allitems);
+});
+
+app.delete('/all-items', (req, res) => {
+  res.status(400).json(allitems);
+});
 //////////////////////////////////////////////////
 
 app.listen(port, () => {

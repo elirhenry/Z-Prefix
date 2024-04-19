@@ -23,7 +23,7 @@ const Inventory = () => {
       axios.delete(`http://localhost:8080/items/${id}`)
         .then(res => {
           alert('Item deleted')
-          navigate('/inventory')
+          navigate('/my-store')
         })
         .catch(err => console.log(err))
     }
